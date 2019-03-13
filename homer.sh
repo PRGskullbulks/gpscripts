@@ -2,7 +2,7 @@
 
 TOMORROW=$(date -d '+1 day' +'%Y%m%d')
 TODAY=$(date  +'%Y%m%d')
-MYSQL='/usr/bin/mysql -uroot -pInterface2077'
+MYSQL='/usr/bin/mysql -uroot -p'
 
 $MYSQL homer_data -e "CREATE TABLE IF NOT EXISTS isup_capture_all_$TOMORROW like isup_capture_all_$TODAY"
 $MYSQL homer_data -e "CREATE TABLE IF NOT EXISTS sip_capture_call_$TOMORROW like sip_capture_call_$TODAY"
