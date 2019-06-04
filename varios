@@ -1,0 +1,2 @@
+#limpiar tablas de mysql en homer
+for table in $(mysql -uroot homer_data -e " show tables like 'sip_capture_re%'"); do echo $table;mysql -uroot homer_data -e "truncate table $table"; done
